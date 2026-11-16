@@ -1,0 +1,93 @@
+### git worktree list
+C:/Users/USER/.copilot/copilot-worktrees/naomi-drabkin_ticketrush-final-exercise/ticket-rush-submit 05a7ae4 [history-rewrite/main-clean]
+
+### git branch -a -vv
+backup/main-before-user-authorized-rewrite                              6a4ffe4 Merge branch 'hotfix/refund-policy' into integrate/release-to-main
+* history-rewrite/main-clean                                              05a7ae4 fix: refund ticket price and document review
+  hotfix/price-revert                                                     cadae01 [origin/main: ahead 1] Revert "perf: faster price formatting"
+  hotfix/refund-policy                                                    a1d01d9 [origin/main: ahead 22] fix: refund ticket price without service fee
+  integrate/release-to-main                                               6a4ffe4 [origin/main: ahead 23] Merge branch 'hotfix/refund-policy' into integrate/release-to-main
+  main                                                                    05a7ae4 [origin/main: ahead 17] fix: refund ticket price and document review
+  release/v1.1                                                            7c2c73d [origin/release/v1.1: ahead 2] Merge branch 'hotfix/price-revert' into release/v1.1
+  review/noa-refund                                                       93ff834 [origin/naomi-drabkin/review/noa-refund] review: document refund calculation findings
+  remotes/origin/HEAD                                                     -> origin/release/v1.1
+  remotes/origin/feature/early-access                                     f5fc669 feat: raise member ticket limit to six
+  remotes/origin/feature/waitlist                                         c3c4a26 feat: add duplicate-safe waitlist
+  remotes/origin/hotfix/price                                             4c5709e revert: restore accurate price formatting
+  remotes/origin/hotfix/security                                          a993e29 security: stop tracking local payment credentials
+  remotes/origin/hotfix/show-date                                         bb7a331 fix: correct concert date in events.js
+  remotes/origin/main                                                     6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/naomi-drabkin-ticket-rush-alert-timer                    6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/naomi-drabkin/backup/main-before-user-authorized-rewrite 6a4ffe4 Merge branch 'hotfix/refund-policy' into integrate/release-to-main
+  remotes/origin/naomi-drabkin/history-rewrite/main-clean                 05a7ae4 fix: refund ticket price and document review
+  remotes/origin/naomi-drabkin/hotfix/price-revert                        cadae01 Revert "perf: faster price formatting"
+  remotes/origin/naomi-drabkin/hotfix/refund-policy                       a1d01d9 fix: refund ticket price without service fee
+  remotes/origin/naomi-drabkin/integrate/release-to-main                  6a4ffe4 Merge branch 'hotfix/refund-policy' into integrate/release-to-main
+  remotes/origin/naomi-drabkin/main                                       05a7ae4 fix: refund ticket price and document review
+  remotes/origin/naomi-drabkin/release/v1.1                               7c2c73d Merge branch 'hotfix/price-revert' into release/v1.1
+  remotes/origin/naomi-drabkin/result                                     59d4bf3 result naomi-drabkin 88/100
+  remotes/origin/naomi-drabkin/review/noa-refund                          93ff834 review: document refund calculation findings
+  remotes/origin/release/v1.1                                             96b46ff merge: exclude local payment credentials
+  remotes/origin/review/noa-refund                                        93ff834 review: document refund calculation findings
+
+### git log --graph --oneline --all -n 80
+* 59d4bf3 (origin/naomi-drabkin/result) result naomi-drabkin 88/100
+* 05a7ae4 (HEAD -> history-rewrite/main-clean, tag: v1.1, origin/naomi-drabkin/main, origin/naomi-drabkin/history-rewrite/main-clean, main) fix: refund ticket price and document review
+| *   6a4ffe4 (origin/naomi-drabkin/integrate/release-to-main, origin/naomi-drabkin/backup/main-before-user-authorized-rewrite, integrate/release-to-main, backup/main-before-user-authorized-rewrite) Merge branch 'hotfix/refund-policy' into integrate/release-to-main
+| |\  
+| | * a1d01d9 (origin/naomi-drabkin/hotfix/refund-policy, hotfix/refund-policy) fix: refund ticket price without service fee
+| | * 8ea957f Merge pull request #1 from naomi-drabkin/naomi-drabkin/review/noa-refund
+| |/| 
+| | * 93ff834 (origin/review/noa-refund, origin/naomi-drabkin/review/noa-refund, review/noa-refund) review: document refund calculation findings
+| | * f7e8785 test: refund tests
+| | * 61bfedd feat: refund calculation for cancelled orders
+| * |   34a9cf2 Merge remote-tracking branch 'origin/naomi-drabkin/release/v1.1' into integrate/release-to-main
+| |\ \  
+| |/ /  
+|/| /   
+| |/    
+* |   7c2c73d (tag: naomi-drabkin/v1.1, origin/naomi-drabkin/release/v1.1, release/v1.1) Merge branch 'hotfix/price-revert' into release/v1.1
+|\ \  
+| * | cadae01 (origin/naomi-drabkin/hotfix/price-revert, hotfix/price-revert) Revert "perf: faster price formatting"
+| |/  
+* |   96b46ff (origin/release/v1.1, origin/HEAD) merge: exclude local payment credentials
+|\ \  
+| * | a993e29 (origin/hotfix/security) security: stop tracking local payment credentials
+| |/  
+* |   84755a1 merge: include urgent concert date correction
+|\ \  
+| * | bb7a331 (origin/hotfix/show-date) fix: correct concert date in events.js
+| |/  
+* |   51eb09e merge: include duplicate-safe waitlist feature
+|\ \  
+| * | c3c4a26 (origin/feature/waitlist) feat: add duplicate-safe waitlist
+| |/  
+* |   17b337c merge: include early access and urgent pricing fixes
+|\ \  
+| |/  
+|/|   
+| * f5fc669 (origin/feature/early-access) feat: raise member ticket limit to six
+| *   fd5bfff Merge branch 'hotfix/price' into feature/early-access
+| |\  
+| | * 4c5709e (origin/hotfix/price) revert: restore accurate price formatting
+| |/  
+|/|   
+| *   b6351f2 merge: combine student and early access pricing
+| |\  
+| | * d4b1e35 test: add student discount tests
+| | * 0841085 feat: student discount (15%)
+| |/  
+|/|   
+| * 884597f feat: add early access member pricing
+|/  
+* 6e5b25d (origin/naomi-drabkin-ticket-rush-alert-timer, origin/main) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
